@@ -1,9 +1,33 @@
 import React, { Component } from 'react';
 
-class App extends Component {
-  render() {
-    return <h1>Hello, world!</h1>;
-  }
+// AppクラスがComponentを継承している
+// Appのことをクラスコンポーネントと呼ぶ
+// class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <label htmlFor="bar">bar</label>
+//         <input type="text" onChange={ () => {console.log("I am clicked.")} }/>;
+
+//       </div>
+//     );
+//   }
+// }
+
+// 関数コンポーネント
+const App = () => {
+  return (
+    <div>
+      <Cat />
+      <Cat />
+      <Cat />
+      <Cat />
+    </div>
+  ); 
 }
 
-export default App;
+const Cat = () => {
+  return <div>Meow!</div>;
+}
+
+export default App; 
